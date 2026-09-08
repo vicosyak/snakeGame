@@ -23,4 +23,21 @@ void setup() {
     tailLength = 0;
 }
 
+char boardView() {
+    for (int i = 0; i < 15; i++) {
+        for (int j = 0; j < 15; j++) {
+            if (headY == i && headX == j) {
+                printf("0");
+            } else if (fruitY == i && fruitX == j) {
+                printf("F");
+            } else if (i == 0 || j == 0 || i == 14 || j == 14 ) {
+                printf("#");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
 
